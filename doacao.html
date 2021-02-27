@@ -124,11 +124,11 @@
          </div>
     </div>
     <div id="frame">&nbsp;</div>
-    <div id="iframe1" class="container-fluid cid-sq9e1PExGk d-none"  data-rv-view="906" >
+    <div id="iframe1" class="container-fluid cid-sq9e1PExGk d-none"   >
         <div class="row justify-content-center">
             <div class="col-12 col-lg-12  col-md-12 " >
-                <div class="embed-responsive embed-responsive-1by1">
-                   <iframe id="iframe_cielo" style="background-color: #e8e8e8;border-style: none;" name="iframe_cielo" frameborder="0" class="embed-responsive-item" src="http://#"></iframe>
+                <div class="embed-responsive embed-responsive-16by9">
+                   <iframe id="iframe_cielo" style="background-color: #e8e8e8;border: none; " height="100%" name="iframe_cielo" frameborder="0" class="embed-responsive-item" src="http://#"></iframe>
                 </div>
             </div>
         </div>
@@ -150,18 +150,21 @@
     </section>
 </div>
 
- <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
-    <input name="animation" type="hidden">
+ <!--<div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">-->
 <!-- scripts-->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="application/javascript">
-    /*
-    .blink
-    */
+
     function onClickButton( getLink ){
         console.log('vai dormir '+ getLink);
         /**/
+        // console.log('wh:'+$(window).height());   // altura do browser
+        // console.log('dh: '+$(document).height()); // altura do documento HTML
+        // console.log('ww:'+$(window).width());   // comprimento do browser
+        // console.log('dw: '+$(document).width()); // comprimento do documento HTML
         $("#iframe1").removeClass("d-none");
+        // $('#iframe_cielo').attr('width', $(window).width());
         $('#iframe_cielo').attr('src', getLink);
         $('html, body').animate({
             scrollTop: $("#frame").offset().top
