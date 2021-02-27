@@ -87,7 +87,7 @@
     <div class="container">
         <div class="inner-container" style="width: 100%;">
             <hr class="line" style="width: 25%;">
-            <div class="section-text align-center mbr-fonts-style display-5">DOE</div>
+            <div id="titulo1"class="section-text align-center mbr-fonts-style display-5"></div>
             <hr class="line" style="width: 25%;">
         </div>
         </div>
@@ -99,7 +99,7 @@
 
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text col-12 mbr-fonts-style display-7 col-md-10"><p>Em 2021, a partir de colaborações e apoios internacionais, a LPV está expandindo suas ações, auxiliando os jovens e adolescentes das comunidades a se desenvolverem como atletas e poderem fazer carreira no exterior.</p></div>
+            <div id="texto1" class="mbr-text col-12 mbr-fonts-style display-7 col-md-10"></div>
         </div>
     </div>
 </section><div class="container cid-sq9e1PExGk" id="content1-1i" data-rv-view="906">
@@ -114,7 +114,7 @@
                                         <!--<div class="dragArea row justify-content-center">-->
                     <div class=" row justify-content-center">
                       <div class="form-group col-12 col-lg-6  col-md-6 ">
-                        <label for="currencydonation">Escolha:</label>
+                        <!--<label for="currencydonation">Escolha:</label>-->
                         <!-- <select class="form-control currencydonation" id="currencydonation" onchange="currencyChange()" tabindex="-1"> -->
                         <select class="form-control currencydonation" id="currencydonation"
                         onchange="currencyChange()" tabindex="-1">
@@ -131,8 +131,15 @@
 
 
           </form><!---Formbuilder Form--->
+          <div>&nbsp;</div>
+          <div>&nbsp;</div>
+
       </div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
   </div>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
 
 </div><section id="top-1" hidden><a href="https://mobirise.site"></a></section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>  <script src="assets/theme/js/script.js"></script>
   <div id="rodape" style="position: fixed;  bottom: 0;  left: 0;  width: 100%;">
@@ -187,21 +194,35 @@
                 // console.log('lang_name=',currency_lang)
                 // console.log('currencyvalues=',currencyvalues)
                 cielolink=linkEUR[i];
-                console.log('url: '+cielolink);
+                //console.log('url: '+cielolink);
+                var titulo1="DONATE NOW";
+                $("#titulo1" ).html(titulo1);
+                var texto1 = "<p>bla bla bla bla</p>";
+                $("#texto1" ).html(texto1);
+
             }
             else if  (currency_lang=="USD"){
                 currencyvalues = "US$ "+value+".00";
                 // console.log('lang_name=',currency_lang)
                 // console.log('currencyvalues=',currencyvalues)
                 cielolink=linkUSD[i];
-                console.log('url: '+cielolink);
+                //console.log('url: '+cielolink);
+                var titulo1 = "DONATE NOW";
+                $("#titulo1" ).html(titulo1);
+                var texto1 = "<p>bla bla bla bla</p>";
+                $("#texto1" ).html(texto1);
+
             }
             else {
                 currencyvalues = "R$ "+value+",00";
                 // console.log('lang_name=',currency_lang)
                 // console.log('currencyvalues=',currencyvalues)
                 cielolink=linkBRL[i];
-                console.log('url: '+cielolink);
+                //console.log('url: '+cielolink);
+                var titulo1="DOE AGORA";
+                $("#titulo1" ).html(titulo1);
+                var texto1 = "<p>bla bla bla bla</p>";
+                $("#texto1" ).html(texto1);
             }
             html1 ="<div class='input-group'><div class='btn-group' role='group' aria-label='give-donation'>";
             //html2='<a href="stackoverflow.com" target="_blank"><button id="'+ currency_lang+value +'" type="button" data-price-id="'+value+'" class="btn btn-dark">'+currencyvalues+' </button></a>';
@@ -224,7 +245,7 @@
         var browserlang = navigator.languages;
 
         usrlang = browserlang[0].substring(0, 2);
-        usrlang = 'es';
+        //usrlang = 'es';
         if ((usrlang == 'es') || (usrlang == 'fr') || ( usrlang == 'it') || (usrlang == 'uk')) {
             $("#currencydonation option[value='EUR']").attr("selected","selected");
             var lang_name = 'EUR';
